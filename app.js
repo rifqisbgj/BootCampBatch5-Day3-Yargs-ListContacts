@@ -49,11 +49,11 @@ yargs.command({ // membuat command
             contacts.detail(argv.name);
         }
     })
-    .command({
+    .command({ // command for show all data
         command: 'list',
         describe: 'show all data contacts',
-        handler(argv) {
-            contacts.listData();
+        handler() {
+            contacts.listData(); // akses fungsi untuk menampilkan seluruh data
         }
     });
 yargs.parse();
